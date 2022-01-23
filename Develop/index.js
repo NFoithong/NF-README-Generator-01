@@ -71,7 +71,7 @@ const questions = [{
     },
     {
         type: 'input',
-        name: 'test',
+        name: 'testing',
         message: 'How do you test this project?',
         validate: (testingInput) => {
             if (testingInput) {
@@ -114,7 +114,7 @@ const questions = [{
 // function writeToFile(fileName, data) {}
 const writeToFile = fileContent => {
     return new Promise((resolve, reject) => {
-        fs.writeFile('./generateMarkdown.md', fileContent, err => {
+        fs.writeFile('./generateREADME.md', fileContent, err => {
             if (err) {
                 reject(err);
                 return;

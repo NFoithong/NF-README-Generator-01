@@ -7,11 +7,11 @@ const index = require('../index.js');
 function renderLicenseBadge(license) {
     let badge = '';
     if (license === 'MIT') {
-        badge = '[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)]';
+        badge = '![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)'
     } else if (license === 'Apache 2.0') {
-        badge = '[![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)]';
+        badge = '![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)'
     } else if (license === 'GNU GPL v3') {
-        badge = '[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)]';
+        badge = '![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)'
     } else {
         badge = '';
     }
@@ -23,11 +23,11 @@ function renderLicenseBadge(license) {
 function renderLicenseLink(license) {
     let licenseLink = '';
     if (license === 'MIT') {
-        licenseLink = 'https://opensource.org/licenses/MIT';
+        licenseLink = 'https://opensource.org/licenses/MIT'
     } else if (license === 'Apache 2.0') {
-        licenseLink = 'https://opensource.org/licenses/Apache-2.0';
+        licenseLink = 'https://opensource.org/licenses/Apache-2.0'
     } else if (license === 'GNU GPL v3') {
-        licenseLink = 'https://www.gnu.org/licenses/gpl-3.0';
+        licenseLink = 'https://www.gnu.org/licenses/gpl-3.0'
     } else {
         licenseLink = '';
     }
@@ -48,44 +48,44 @@ function renderLicenseSection(license) {
 
 // TODO: Create a function to generate markdown for README
 function generateMarkdown(data) {
-    return `# ${data.title}
+    return `
+# ${data.title}
     
-    ## ${renderLicenseSection(data.license)} ${renderLicenseBadge(data.license)}
-    ### ${renderLicenseLink(data.license)}
+${renderLicenseSection(data.license)} ${renderLicenseBadge(data.license)}
+${renderLicenseLink(data.license)}
 
-    ## Table of Contents:
-    ### [Description](#description)
-    ### [Installation](#installation)
-    ### [Usage](#usage)
-    ### [License](#license)
-    ### [Contributing](#contributing)
-    ### [Tesing](#tesing)
-    ### [Question](#question)
+## Table of Contents:
+### • [Description](#description)
+### • [Installation](#installation)
+### • [Usage](#usage)
+### • [License](#license)
+### • [Contributors](#contributors)
+### • [Testing](#testing)
+### • [Question](#question)
 
-    ## Description
-    ### ${data.description}
+## Description
+${data.description}
 
-    ## Installation
-    ### ${data.installation}
+## Installation
+${data.installation}
 
-    ## Usage
-    ### ${data.usage}
-    
-    ## License
-    ### ${data.license}
-    
-    ## Contributing
-    ### ${data.contributing}
-    
-    ## Tesing
-    ### Run the following commands in your terminal to test this app:
-    ### ${data.tesing}
-    
-    ## Question
-    ### If you have any question, you may contact me at either
-    ### Github: https://github.com/${data.github}
-    ### or
-    ### email: ${data.email}
+## Usage
+${data.usage}
+
+## License
+${data.license}
+
+## Contributors
+${data.contribution}
+
+## Testing
+Run the following commands in your terminal to test this app:
+${data.testing}
+
+## Question
+### If you have any question, you may contact me at either 
+### Github: https://github.com/${data.github}
+### or email: ${data.email}
 `;
 }
 
