@@ -9,4 +9,4 @@
 ## Click the link to walkthrough video demonstrating the functionality of the application
 
 ### Video file on screencastify
-![Demo-readme-generator video file](https://watch.screencastify.com/v/dRN0KovGQhDY1WokwQdU)
+![Demo-readme-generator video file](https://user-images.githubusercontent.com/69065671/150662412-fc1876ea-f922-461f-8c16-f0e29b8119ef.mp4)
